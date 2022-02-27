@@ -14871,20 +14871,6 @@ george: yes, it was purple, i liked it, i dont actually recall considering the b
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -15364,7 +15350,7 @@ out = output[:, -1]</code></pre>
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data params</span>
 <span class="c1"># Sequence Length</span>
-<span class="n">sequence_length</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># of words in a sequence</span>
+<span class="n">sequence_length</span> <span class="o">=</span> <span class="mi">12</span>  <span class="c1"># of words in a sequence</span>
 <span class="c1"># Batch Size</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">128</span>
 
@@ -15385,7 +15371,7 @@ out = output[:, -1]</code></pre>
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Training parameters</span>
 <span class="c1"># Number of Epochs</span>
-<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="c1"># Learning Rate</span>
 <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span>
 
@@ -15397,7 +15383,7 @@ out = output[:, -1]</code></pre>
 <span class="c1"># Embedding Dimension</span>
 <span class="n">embedding_dim</span> <span class="o">=</span> <span class="mi">300</span>
 <span class="c1"># Hidden Dimension</span>
-<span class="n">hidden_dim</span> <span class="o">=</span> <span class="mi">192</span>
+<span class="n">hidden_dim</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="c1"># Number of RNN Layers</span>
 <span class="n">n_layers</span> <span class="o">=</span> <span class="mi">2</span>
 
@@ -15466,32 +15452,39 @@ out = output[:, -1]</code></pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Training for 6 epoch(s)...
-Epoch:    1/6     Loss: 4.8347760168711345
+<pre>Training for 8 epoch(s)...
+Epoch:    1/8     Loss: 4.7612411296367645
 
-Epoch:    1/6     Loss: 4.41184335064888
+Epoch:    1/8     Loss: 4.344177521387736
 
-Epoch:    2/6     Loss: 4.121841552487723
+Epoch:    2/8     Loss: 4.052287350040579
 
-Epoch:    2/6     Loss: 3.9487586348056793
+Epoch:    2/8     Loss: 3.880843279282252
 
-Epoch:    3/6     Loss: 3.8463751270875
+Epoch:    3/8     Loss: 3.770046206248111
 
-Epoch:    3/6     Loss: 3.768945853551229
+Epoch:    3/8     Loss: 3.6597337432702384
 
-Epoch:    4/6     Loss: 3.69929558539048
+Epoch:    4/8     Loss: 3.602010646833558
 
-Epoch:    4/6     Loss: 3.652162651538849
+Epoch:    4/8     Loss: 3.5278348553180696
 
-Epoch:    5/6     Loss: 3.5980843334135493
+Epoch:    5/8     Loss: 3.4902381167685212
 
-Epoch:    5/6     Loss: 3.561734325567881
+Epoch:    5/8     Loss: 3.42772193757693
 
-Epoch:    6/6     Loss: 3.5228768509282316
+Epoch:    6/8     Loss: 3.4090955017732534
 
-Epoch:    6/6     Loss: 3.496097089687983
+Epoch:    6/8     Loss: 3.3605073786576587
 
-Model Trained and Saved
+Epoch:    7/8     Loss: 3.3446251817892585
+
+Epoch:    7/8     Loss: 3.309699140787125
+
+Epoch:    8/8     Loss: 3.290424116815874
+
+Epoch:    8/8     Loss: 3.2578242797056833
+
 </pre>
 </div>
 </div>
@@ -15509,6 +15502,18 @@ Model Trained and Saved
 </div>
 </div>
 
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Model Trained and Saved
+</pre>
+</div>
+</div>
+
 </div>
 
 </div>
@@ -15522,7 +15527,12 @@ Model Trained and Saved
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Answer:</strong> (I tried several values for sequence_lengths and find that one size made the model converge faster impact the loss aboou  hidden_dim its impactting the perfomance and loss progress  , n_layers i found 2 layer gives better results  and i also  i followed the lesson which recomand this value )</p>
+<p><strong>Answer:</strong> 
+I tried to maximize the length values of sequence_lengths but it was impacting the performance when you go with greater then ~10 
+.<p>hidden_dim, I started with 128 and increased it gradually found that loss converges to minimum at rapid rate, But also the performance get decreased ,i stopped at 256 and got good results  and aimed the goal of 3.5 and better .</p>
+<p><p>About n_layers I just followed the repeating recommendation from the lessons to go with 2 layers, I tried the value 1 and I got poor results.</p>
+<p><p>I started with 40 epochs just to let me feel the impact of other Hyper parameters impact while optimum parameters were set, I observed that gaol of 3.5 reached after 5 epochs, so finally for this project i finished with value 8</p>
+<p><p>Regarding embedding dimension, i started with 400 as per the sentiment example and reduced the value 350 and then 300 to minimize the processing time and kept the same loss results.</p>
 
 </div>
 </div>
@@ -15692,7 +15702,7 @@ Model Trained and Saved
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run the cell multiple times to get different results!</span>
 <span class="n">gen_length</span> <span class="o">=</span> <span class="mi">400</span> <span class="c1"># modify the length to your preference</span>
 <span class="n">prime_word</span> <span class="o">=</span> <span class="s1">&#39;jerry&#39;</span> <span class="c1"># name for starting the script</span>
-<span class="n">sequence_length</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">sequence_length</span> <span class="o">=</span> <span class="mi">12</span>
 <span class="n">train_on_gpu</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE</span>
@@ -15731,7 +15741,79 @@ Model Trained and Saved
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>jerry: around george: that- of you.. to that- kramer: you.. to the from he kramer:(the from your are(.. situation for that you.. to that you that up i hi was i you.. it the from day i mr kramer a we! who keys in jerry: sure,.. it that you.. elaine: i on? the his hey mr not is! money off,.. situation jerry: estelle- jerry: who&#39;s off,.. situation for that up jerry: madam you.. to that you.. situation jerry: estelle you.. situation recall estelle? i on? jerry: claire this jerry: forced- like kramer,.. it the from, the jerry his for,.. witness: recall jerry: sure you.. elaine: i&#39;m,.. situation for the don&#39;t! back mean? see the his the yes an getting a we is! bobby,.. situation for that you.. situation for? the don&#39;t not shouting,.. situation for i gonna a an talk at of, i gonna a your jerry: around,.. to the his the yes he me,.. it the his for, so! sorry off, the jerry on,.. to the jerry gonna a an i a an i at kramer:,.. to i&#39;m? the jerry gonna a we! who keys,.. to that- me,.. it i&#39;m,.. kevin i jerry his for(.. it the jerry on,.. it yeah? i on? jerry: better why- is jerry: stopped in jerry: starts this what the from an i a there think,.. situation jerry: estelle? i on? jerry: door them-? i gonna! by? what i your! by,,.. situation for that up i hi her you.. to the from,.. situation the from he these,.. situation the his hey yes we,.. and the jerry on, the jerry on but the yes your me why? see jerry:
+<pre>jerry: packet.
+
+elaine: oh, i know, i was employed, but, the police are gonna make a pee- serial killer and a vote.
+
+hoyt: so, you know what the library do?
+
+chiles: i don&#39;t think this is the first thing, and the one of a pee- four years ago.
+
+hoyt: i told ya.
+
+hoyt: i think i was employed.
+
+hoyt: so, uh-- what are you doing?
+
+george: yeah, i know.
+
+hoyt: oh, yeah...
+
+hoyt: oh, yeah.. and you want a defective ones?
+
+hoyt: yes, yes, yes.
+
+[new witness: pharmacist!
+
+[new witness: art nazi.
+
+hoyt:(pointing to elaine) you want to see the court?
+
+george: yes, i was thinking about that whole thing.
+
+george: oh, yeah.
+
+hoyt: so what are you doing tonight.
+
+hoyt: so, uh- huh.
+
+hoyt: oh, hi, i was employed on the phone.
+
+hoyt: so what do they do?
+
+jerry: yeah.
+
+jerry: i think it&#39;s the same thing of nbc.
+
+hoyt: you know, the one of the controversial samaritan trial?
+
+jerry: i think you could do this.
+
+hoyt: yes, you were right.
+
+[new witness: marcellino to your stand and the moors.
+
+hoyt: the factory, and they were in the contest.
+
+[new witness: moors
+
+hoyt:(to elaine, complaining stu to beep)
+
+hoyt: so the bubble--
+
+hoyt:(chanting)
+
+hoyt: so what?
+
+george: oh, no. no, no, no, no, no, no, i can&#39;t believe it.
+
+[new witness: marcellino to proceed.
+
+hoyt: the factory?
+
+hoyt: i was in california, i have to conserve lengths to capture the longest.
+
+jerry: oh, no,
 </pre>
 </div>
 </div>
