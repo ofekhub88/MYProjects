@@ -71,7 +71,7 @@ def predict_fn(input_data, model):
     #         data_len - The length of the review
 
     
-    proses_data=convert_and_pad(review_to_words(input_data),pad=500)
+    proses_data=convert_and_pad(model.word_dict,review_to_words(input_data),pad=500)
     data_X = np.array(proses_data[0])
     data_len = np.array(proses_data[1])
 
