@@ -71,9 +71,8 @@ def predict_fn(input_data, model):
     #         data_len - The length of the review
 
     
-    proses_data=convert_and_pad(model.word_dict,review_to_words(input_data),pad=500)
-    data_X = np.array(proses_data[0])
-    data_len = np.array(proses_data[1])
+    data_X ,data_len =convert_and_pad(model.word_dict,review_to_words(input_data),pad=500)
+    
 
     # Using data_X and data_len we construct an appropriate input tensor. Remember
     # that our model expects input data of the form 'len, review[500]'.
@@ -88,7 +87,10 @@ def predict_fn(input_data, model):
 
     # TODO: Compute the result of applying the model to the input data. The variable `result` should
     #       be a numpy array which contains a single integer which is either 1 or 0
-    
-    result = round(model(data))
+    with torch.no_grad():
+      out = model(data).detach().cpu()
+      out = out.numpy()
+      result = np.round(out)
+
 
     return result
